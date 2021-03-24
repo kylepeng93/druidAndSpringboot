@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "5.3.0"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.4.3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.4.3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.3'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.4.3'
+    implementation group: 'com.alibaba', name: 'druid-spring-boot-starter', version: '1.2.5'
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.4'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.20'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.18'
+
+}
+
+test {
+    useJUnitPlatform()
+}
