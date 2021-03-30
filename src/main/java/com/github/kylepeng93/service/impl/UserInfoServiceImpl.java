@@ -22,6 +22,6 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public UserInfoPojo getUserInfoById(Integer id) {
         if (id == null) return null;
-        return userInfoMapper.selectById(id);
+        return userInfoMapper.selectByPrimaryKey(id);
     }
 }

@@ -11,6 +11,7 @@ import org.apache.ibatis.annotations.Select;
  * @date 2021-03-24 下午11:11
  */
 public interface UserInfoMapper {
-    @Select("select * from user_info where id = #{id}")
-    UserInfoPojo selectById(int id);
+
+    UserInfoPojo selectByPrimaryKey(int id);
+
 }
